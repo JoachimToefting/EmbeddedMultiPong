@@ -8,6 +8,8 @@ Opt:
 ## Spillets regler
 Vent til der står "Waiting p: 0 o: 0" på skærmen. En spiller trykker på knappen på rotary encoderen, den spiller vil få serveret en bold, hvor modsatte spiller skal vente på at bolden kommer eller den går bag padden (i mål). Padden kan flyttes imens bolden er på banen med rotary encoderen. Man vinder når man har fået 5 mål. (Hvis man ønsker kan der ændres i indstillingerne øverst i koden)
 
+Der ligger en video i images mappen der viser lidt af spillet.
+
 ## Hardware
 Spillet kører på to MKR wifi 1010 hvor der er tilsluttet en skærm og en rotary encoder. Software og hardware opsætning er ens på begge enheder.
 
@@ -52,4 +54,4 @@ OnMessage er callback functionen der skal sætte flagene så loopen kan fange de
 
 
 ## Mangler
-Jeg vil gerne have en mere robust multiplayer oplevelse hvor man kan starte flere forskellige spil på samme MQTT broker (igangværende spil tjekker player nummeret og burde kunne kører). Knappen på rotary encoder kan nogle gange aktiveres af sig selv. Trykker man på knappen imens et spil kører bliver spillet på modstanderens spil ikke stoppet. Vil gerne have haft delt koden lidt mere op i stedet for en main.
+Jeg vil gerne have en mere robust multiplayer oplevelse hvor man kan starte flere forskellige spil på samme MQTT broker (igangværende spil tjekker player nummeret og burde kunne kører). Knappen på rotary encoder kan nogle gange aktiveres af sig selv. Trykker man på knappen imens et spil kører bliver spillet på modstanderens spil ikke stoppet. Spillet kan blive desynced midt i spillet pga. MQTT message ikke bliver samlet op. Vil gerne have haft delt koden lidt mere op i stedet for en main.
