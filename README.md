@@ -31,6 +31,14 @@ Spillet kører på to MKR wifi 1010 hvor der er tilsluttet en skærm og en rotar
  | DT             | PIN9  |
  | CLK            | PIN10 |
 
+## Software
+Libraries brugt: 
+ - arduino-libraries/WiFiNINA@^1.8.13
+ - 256dpi/MQTT@^2.5.0
+ - adafruit/Adafruit GFX Library@^1.10.15
+ - adafruit/Adafruit SSD1306@^2.5.3
+ - paulstoffregen/Encoder@^1.4.1
+
 ## Tour de Code
  Koden er delt op i fire fokus områder:
 #### Setup:
