@@ -9,6 +9,7 @@
 
 #include "arduino_secrets.h"
 
+
 //Screen
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
@@ -71,6 +72,11 @@ void Reset(void);
 
 
 void setup() {
+
+	//Reset pin
+	digitalWrite(PIN_A1, HIGH);
+	pinMode(PIN_A1, OUTPUT);
+
 	//Serial
 	Serial.begin(115200);
 	// while (!Serial)
@@ -393,6 +399,10 @@ void OnMessage(String &topic, String &payload){
 			{
 				bitSet(actionFlags, GAME_LOST);
 			}
+		}
+		else if(payload[0] == 'r')
+		{
+			digitalWrite(PIN_A1, LOW);
 		}
 	}
 }
